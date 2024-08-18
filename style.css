@@ -1,0 +1,107 @@
+/*----------elements-------------- */
+*{
+    margin: 0;
+    padding: 0;
+    border-color: hsl(186, 15%, 59%);
+    color: hsl(187, 24%, 22%);
+    font-weight: 500;
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dff1e7;
+    
+}
+h1{
+    font-weight: 750;
+    font-size: xx-large;
+}
+button{
+    background-color: hsl(169, 82%, 27%);
+    border-color: hsl(169, 82%, 27%);;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    width: 100%;
+    padding:20px 0;
+    border-radius: 8px;
+}
+label{
+    margin: 10px 0;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+input{
+    padding: 15px 5px !important;
+    border-radius: 8px;
+
+}
+
+/* --------snippets ------------*/
+.flexcol{
+    display: flex;
+    flex-direction: column;
+}
+.flexrow{
+    display: flex;
+    flex-direction: row;
+}
+.spacing{
+    margin-top: 20px;
+}
+
+/*-------- Name and Query-------- */
+.fullname, .querycheckbox{
+    width: 100%;
+    justify-content: space-between;
+}
+.name, .querybox{
+    width: 49%;
+    box-sizing: border-box;
+}
+/* -------Query------ */
+.querybox{
+    border: 1px solid;
+    padding: 15px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+.querybox label{
+    width: 75%;
+    margin: 0;
+}
+input[type="radio"] {
+    width: 20px;
+}
+
+
+
+/* Message  */
+
+#message{
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+b{
+    color: hsl(169, 82%, 27%);
+}
+
+/* footer */
+.attribution { font-size: 11px; text-align: center; position: fixed;bottom: 0;display: block; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+

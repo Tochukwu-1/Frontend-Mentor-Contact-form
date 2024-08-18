@@ -1,52 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <form action="" method="">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <div class="spacing"></div>
+          <!-- fullname -->
+          <div class="fullname flexrow">
+              <div class="FirstName name flexcol">
+                  <label for="first_name">First Name <b>*</b></label>
+                  <input type="text" name="firstname" id="first_name">
+              </div>
+              <div class="LastName name flexcol">
+                  <label for="last_name">Last Name <b>*</b></label>
+                  <input type="text" name="lastname" id="last_name">
+              </div>
+          </div>
+           <!-- This field is required              This field is required -->
+          <div class="spacing"></div>
+          <!-- email -->
+          <div class="Email flexcol">
+            <label for="email">Email Address <b>*</b></label>
+            <input type="email" name="Email" id="email">
+          </div>
+          <!-- Please enter a valid email address
+               This field is required -->
+          <div class="spacing"></div>
+          <!-- query-type -->
+          <div class="query flexcol">
+                <label>Query Type <b>*</b></label>
+                <div class="querycheckbox flexrow">
+                    <div class="general_enquiry flexrow querybox">
+                        <input type="radio" name="query"  id="general_enquiry">
+                        <label for="general_enquiry">General Enquiry</label>
+                    </div>
+                    <div class="support_request querybox">
+                        <input type="radio" name="query" id="support_request"><label for="support_request">Support Request</label>
+                    </div>
+                </div>
+          </div>
+          <!-- Please select a query type -->
+          <div class="spacing"></div>
+          <!-- message -->
+          <div class="message flexcol">
+                <label for="message">Message <b>*</b></label>
+                <textarea name="Message" id="message" cols="30" rows="10"></textarea>
+          </div>
+          <!-- This field is required-->
+          <div class="spacing"></div>
+          <!-- consent -->
+          <div class="consent">
+                <input type="checkbox" name="consent" id="consent">
+                <label for="consent">I consent to being contacted by the team <b>*</b></label>
+                <!-- To submit this form, please consent to being contacted -->
+          </div>
+          <div class="spacing"></div>
+          <!-- Submit -->
+          <button>Submit</button>
+           <!-- Message Sent!
+      Thanks for completing the form. We'll be in touch soon! -->
+        </div>  
+    </form>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Asogwa Tochukwu Gabriel</a>.
+      </div>
 </body>
 </html>
