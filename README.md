@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL:(https://github.com/Tochukwu-1/Frontend-Mentor-Contact-form/)
+- Live Site URL:(https://tochukwu-1.github.io/Frontend-Mentor-Contact-form/)
 
 ## My process
 
@@ -60,6 +60,7 @@ Users should be able to:
 - assigning of functionalities by either click, submit,blur, and others. 
 
 ## Author
+  Asogwa Tochukwu Gabriel
 
 
 - Frontend Mentor - [@Tochukwu-1](https://www.frontendmentor.io/profile/Tochukwu-1)
