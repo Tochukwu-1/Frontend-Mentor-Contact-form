@@ -21,73 +21,79 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    <form action="" method="">
+    <form name="contact-form" method="post" >
       <div class="container">
         <h1>Contact Us</h1>
         <div class="spacing"></div>
         <!-- fullname -->
         <div class="fullname mobileflex flexrow">
-          <div class="FirstName name flexcol">
+          <div class="First-name name flexcol">
             <label for="first_name">First Name <b>*</b></label>
             <input type="text" name="firstname" id="first_name" />
+            <p class="error" id="firstNameError">This field is required</p>
           </div>
           <div class="LastName name flexcol">
             <label for="last_name">Last Name <b>*</b></label>
             <input type="text" name="lastname" id="last_name" />
+            <p class="error" id="lastNameError">This field is required</p>
           </div>
         </div>
-        <!-- This field is required              This field is required -->
         <div class="spacing"></div>
+
         <!-- email -->
         <div class="Email flexcol">
           <label for="email">Email Address <b>*</b></label>
           <input type="email" name="Email" id="email" />
+          <p class="error" id="emailError">Please enter a valid email address</p>
         </div>
-        <!-- Please enter a valid email address
-               This field is required -->
         <div class="spacing"></div>
         <!-- query-type -->
         <div class="query flexcol">
           <label>Query Type <b>*</b></label>
           <div class="querycheckbox mobileflex flexrow">
             <div class="general_enquiry flexrow querybox">
-                <input type="radio" name="query" id="general_enquiry" />
+                <input type="radio" name="query" value="general enquiry" id="general_enquiry" />
                 <label for="general_enquiry" class="flexrow">General Enquiry</label>
             </div>
             <div class="support_request querybox">
-              <input type="radio" name="query" id="support_request" />
+              <input type="radio" name="query" value="support request" id="support_request" />
               <label for="support_request">Support Request</label>
             </div>
           </div>
         </div>
-        <!-- Please select a query type -->
+        <p class="error" id="queryError">This field is required</p>
         <div class="spacing"></div>
         <!-- message -->
         <div class="message flexcol">
           <label for="message">Message <b>*</b></label>
-          <textarea name="Message" id="message" cols="20" rows="7"></textarea>
+          <textarea name="Message" id="message" rows="5"></textarea>
+          <p class="error" id="messageError">This field is required</p>
         </div>
-        <!-- This field is required-->
         <div class="spacing"></div>
         <!-- consent -->
         <div class="consent">
-          <input type="checkbox" name="consent" id="consent" />
-          <label for="consent"
-            >I consent to being contacted by the team <b>*</b></label
+          <input type="checkbox" name="consent" id="consent"/>
+          <label for="consent">I consent to being contacted by the team <b>*</b></label
           >
-          <!-- To submit this form, please consent to being contacted -->
+          <p class="error" id="consentError">To submit this form, please consent to being contacted</p>
         </div>
         <div class="spacing"></div>
         <!-- Submit -->
-        <button>Submit</button>
-        <!-- Message Sent!
-      Thanks for completing the form. We'll be in touch soon! -->
+        <button id="button" type="submit">Submit</button>
+
+        <!-- approved -->
+         <div id="approved">
+         <div class="success">
+          <img src="/assets/images/success.png" alt="" srcset=""><h4> Message Sent!</h4>
+         </div> 
+           <p>Thanks for completing the form. We'll be in touch soon!</p>
+         </div>
       </div>
     </form>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Asogwa Tochukwu Gabriel</a>.
+       <br> Coded by <a href="https://x.com/A__Gabriel__T?t=4qxqwhaUpppb319DPLf6Qg&s=09">Asogwa Tochukwu Gabriel</a>.
     </div>
   </body>
 </html>
