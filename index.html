@@ -6,10 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
@@ -21,7 +17,7 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    <main role="main"> 
+    <main> 
       <form name="contact-form" method="post" >
         <div class="container">
           <h1>Contact Us</h1>
@@ -30,24 +26,22 @@
           <div class="fullname mobileflex flexrow">
             <div class="First-name name flexcol">
               <label for="first_name">First Name <b>*</b></label>
-              <input type="text" name="firstname" id="first_name" />
+              <input type="text" name="firstname" id="first_name" placeholder="Firstname" />
               <p class="error" id="firstNameError">This field is required</p>
             </div>
             <div class="LastName name flexcol">
               <label for="last_name">Last Name <b>*</b></label>
-              <input type="text" name="lastname" id="last_name" />
+              <input type="text" name="lastname" id="last_name" placeholder="Lastname" />
               <p class="error" id="lastNameError">This field is required</p>
             </div>
           </div>
-          <div class="spacing"></div>
   
           <!-- email -->
           <div class="Email flexcol">
             <label for="email">Email Address <b>*</b></label>
-            <input type="email" name="Email" id="email" />
+            <input type="email" name="Email" id="email" placeholder="Enter your email address" />
             <p class="error" id="emailError">Please enter a valid email address</p>
           </div>
-          <div class="spacing"></div>
           <!-- query-type -->
           <div class="query flexcol">
             <label>Query Type <b>*</b></label>
@@ -63,19 +57,19 @@
             </div>
           </div>
           <p class="error" id="queryError">This field is required</p>
-          <div class="spacing"></div>
           <!-- message -->
           <div class="message flexcol">
             <label for="message">Message <b>*</b></label>
-            <textarea name="Message" id="message" rows="5"></textarea>
+            <textarea name="Message" id="message" rows="5" placeholder="Click this box to put down your message" ></textarea>
             <p class="error" id="messageError">This field is required</p>
           </div>
-          <div class="spacing"></div>
           <!-- consent -->
           <div class="consent">
-            <input type="checkbox" name="consent" id="consent"/>
+            <div class="consentbox">
+              <input type="checkbox" name="consent" id="consent"/>
             <label for="consent">I consent to being contacted by the team <b>*</b></label
             >
+            </div>
             <p class="error" id="consentError">To submit this form, please consent to being contacted</p>
           </div>
           <div class="spacing"></div>
@@ -87,17 +81,16 @@
         <!-- approved -->
          <div id="approved">
            <div class="success">
-              <img src="/assets/images/success.png" alt="" srcset=""><h4> Message Sent!</h4>
+              <img src="./assets/images/success.png"><h4> Message Sent!</h4>
            </div> 
            <p>Thanks for completing the form. We'll be in touch soon!</p>
          </div>
     </main>
-    <footer role="contentinfo">
-      <div class="attribution">
+          <!-- footer -->
+      <div class="attribution" role="contentinfo" >
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
          <br> Coded by <a href="https://x.com/A__Gabriel__T?t=4qxqwhaUpppb319DPLf6Qg&s=09">Asogwa Tochukwu Gabriel</a>.
       </div>
-    </footer>
   </body>
 </html>

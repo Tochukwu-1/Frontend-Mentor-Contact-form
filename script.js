@@ -1,4 +1,4 @@
-
+// Declaration of variables
 var form = document.forms["contact-form"];
 const firstName = document.getElementById("first_name");
 const lastName = document.getElementById("last_name");
@@ -29,18 +29,20 @@ function isItEmpty() {
         const error = errorArray[i];
         if (i < elementArray.length) {
             if (element.value.trim() === "" && i >= 0) {
-                error.style.display = "block";
+                element.style.transition = "1s";
+                error.style.visibility = "visible";
                 element.style.borderColor = "red";
+                element.style.outline = "none";
             }
         }
     }
     
     if (query[0].checked === false && query[1].checked === false) {
-        queryError.style.display = "block";
+        queryError.style.visibility = "visible";
     }
     
     if (consent.checked === false) {
-        consentError.style.display = "block";
+        consentError.style.visibility = "visible";
     }
 }
 
@@ -49,11 +51,14 @@ function isItEmpty() {
 function checkElement(event) {
   const errorElement = event.target.parentElement.lastElementChild;
   if (event.target.value.trim() === "") {
-    errorElement.style.display = "block";
+    errorElement.style.visibility = "visible";
     event.target.style.borderColor = "red";
+    event.target.style.transition = "1s";
+    event.target.style.outline = "none";
   } else {
-    errorElement.style.display = "none";
+    errorElement.style.visibility = "hidden";
     event.target.style.borderColor = "#0c7d69";
+    event.target.style.outline = "none";
   }
 }
 
@@ -63,13 +68,13 @@ function checkError(event) {
   isItEmpty()
     for (let i = 0; i < error.length; i++) {
       const errorElement = error[i];
-    if (errorElement.style.display !== 'none'){  
+    if (errorElement.style.visibility !== 'hidden'){  
       approved.style.display = 'none';
 
       return;
     }
     else{
-        approved.style.display = 'block';
+      approved.style.display = 'block';
     }
   }
   
@@ -91,15 +96,15 @@ function checkError(event) {
 function inputChecked(event) {
   if (event.target.checked === true) {
     if (event.target === query[0] || event.target === query[1]) {
-        queryError.style.display = "none";
+        queryError.style.visibility = "hidden";
     }
     if (event.target === consent) {
-      consentError.style.display = "none";
+      consentError.style.visibility = "hidden";
     }
 }
     if(event.target === consent){
         if(!event.target.checked){
-            consentError.style.display = "block";
+            consentError.style.visibility = "visible";
         }
 }
 }
@@ -112,6 +117,7 @@ function formReset(event) {
   
 }
 
+  // event listeners for different elements
 form.addEventListener('submit',checkError);
 form.addEventListener('click', formReset);
 query[0].addEventListener("click", inputChecked);
@@ -121,3 +127,9 @@ firstName.addEventListener("blur", checkElement);
 lastName.addEventListener("blur", checkElement);
 email.addEventListener("blur", checkElement);
 Message.addEventListener("blur", checkElement);
+
+firstName.addEventListener("input", checkElement);
+lastName.addEventListener("input", checkElement);
+email.addEventListener("input", checkElement);
+Message.addEventListener("input", checkElement);
+
